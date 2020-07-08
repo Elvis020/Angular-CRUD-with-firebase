@@ -1,0 +1,22 @@
+.normal-form{
+    margin: 10px;
+}
+.control-container{
+    width: 100%;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.control-container > * {
+    width: 100%;
+}
+
+.add-padding {
+    padding-bottom: 10px;  
+}
+mat-radio-group mat-radio-button {
+    margin-left: 15px;
+}
+button {
+    margin: 5px;
+}

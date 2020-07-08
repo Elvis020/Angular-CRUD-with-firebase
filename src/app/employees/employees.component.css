@@ -1,0 +1,8 @@
+.container {
+    margin: 20px 40px;
+}
+
+.fill-space {
+    display: flex;
+    flex: 1 1 auto;
+}
