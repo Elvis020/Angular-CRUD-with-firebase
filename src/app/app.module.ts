@@ -9,6 +9,9 @@ import { EmployeeComponent } from './employees/employee/employee.component';
 import {MaterialModule} from "./material/material.module";
 import { ReactiveFormsModule} from "@angular/forms";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {AngularFireModule} from 'angularfire2';
+import {AngularFireDatabaseModule} from 'angularfire2/database';
+import { environment } from './../environments/environment';
 
 
 @NgModule({
@@ -22,7 +25,9 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     BrowserAnimationsModule,
     AppRoutingModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]

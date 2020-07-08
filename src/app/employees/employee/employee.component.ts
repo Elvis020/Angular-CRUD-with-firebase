@@ -17,15 +17,21 @@ export class EmployeeComponent implements OnInit {
     {id:3, value: 'Dep 3'},
   ];
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.empService.getEmployees();
   }
 
   onClear() {
-    if(this.empService.spaceyForm.valid) {
+    this.empService.spaceyForm.reset();
+    this.empService.initializeFormGroup();
+  }
+
+  onSubmit() {
+    if (this.empService.spaceyForm.valid) {
+      this.empService.insertEmployee(this.empService.spaceyForm.value);
       this.empService.spaceyForm.reset();
+      this.empService.initializeFormGroup();
     }
-    // this.empService.initializeFormGroup();
-    // this.empService.spaceyForm.reset();
   }
 
 }
